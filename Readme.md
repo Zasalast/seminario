@@ -27,20 +27,25 @@ sustentación
 servicios
 base de datos - ia -iot
 
-laas
-paas
-saas
+- laas
+- paas
+- saas
 
-proyecto
+# proyecto
 
 1. idea de proyecto - dos integrantes
 ante proyecto-documentar-socializar
 herramientas- apa-mendeley
 
 marco teorico
-objetivo, desarrollo, conclusiones
+
+- objetivo
+- desarrollo
+- conclusiones
+
 2. nube
 3.
+
 marco teorico
 diagrama fisico
 Diseño de sistema que regule la temperatura de hábitat productor avícola
@@ -57,9 +62,11 @@ evaluar  el sistema para Medir y regular la temperatura del habitad en que se en
 
 que o cual  que sistema permite regular
 justificar el problema
-1-  causas  - temperatura
-2- efectos- enfermedad
-3- consecuencias- muerte
+
+1. causas  - temperatura
+2. efectos- enfermedad
+3. consecuencias- muerte
+
 objetivo
 analisis situacion actual del proyecto, de referentes conceptuales del problema
 diseño
