@@ -12,44 +12,19 @@ provider:
         - arn:aws:dynamodb:us-east-1:919554715646:table/esp32_tabla
 
 functions:
-  hello:
-    handler: src/handler.hello
-    events:
-      - httpApi:
-          path: /
-          method: get  
-  createRead:
-    handler: src/createRead.createRead
-    events:
-      - httpApi:
-          path: /reads
-          method: post
-  getReads:
+   getReads:
     handler: src/getReads.getReads
     events:
       - httpApi:
           path: /reads
           method: get
-          cors: true
   getRead:
     handler: src/getRead.getRead
     events:
       - httpApi:
           path: /reads/{id}
           method: get
-          cors: true
-  updateRead:
-    handler: src/updateRead.updateRead
-    events:
-      - httpApi:
-          path: /reads/{id}
-          method: put
-  deleteRead:
-    handler: src/deleteRead.deleteRead
-    events:
-      - httpApi:
-          path: /reads/{id}
-          method: delete
+ 
 
 resources:
   Resources:
