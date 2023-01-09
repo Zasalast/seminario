@@ -18,7 +18,7 @@ functions:
       - httpApi:
           path: /reads
           method: get
-  getRead:
+   getRead:
     handler: src/getRead.getRead
     events:
       - httpApi:
