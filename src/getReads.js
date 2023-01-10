@@ -9,6 +9,9 @@ const getReads = async (event) => {
 
   return {
     status: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     body: {
         reads,
     },

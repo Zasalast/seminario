@@ -9,13 +9,16 @@ const getRead = async (event) => {
     .get({
       TableName: "esp32_tabla",
       Key: { id },
-    })
+    },)
     .promise();
 
   const read = result.Item;
 
   return {
     status: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     body: read,
   };
 };

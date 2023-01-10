@@ -4,6 +4,8 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs14.x
+  httpApi:
+    cors: true
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -11,20 +13,47 @@ provider:
       Resource:
         - arn:aws:dynamodb:us-east-1:919554715646:table/esp32_tabla
 
+#Globals:
+ # Api:
+ #   cors:
+ #     AllowMethods: "'*'"
+  #    AllowHeaders: "'*'"
+  #    AllowOrigin: "'*'"
+  #    ExposeHeaders: "'*'"
+   #   MaxAge: 86400
+  #Function:
+ #   Timeout: 3
+
+custom:
+  cors:
+    origin: '*'
+    headers:
+      - Content-Type
+      - X-Amz-Date
+      - Authorization
+      - X-Api-Key
+      - X-Amz-Security-Token
+      - X-Amz-User-Agent
+    methods:
+      - OPTIONS
+      - GET
+     
+
 functions:
-   getReads:
+  getReads:
     handler: src/getReads.getReads
     events:
       - httpApi:
           path: /reads
           method: get
-   getRead:
+          cors: true
+  getRead:
     handler: src/getRead.getRead
     events:
       - httpApi:
           path: /reads/{id}
           method: get
- 
+          cors: true
 
 resources:
   Resources:
