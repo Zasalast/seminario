@@ -1,31 +1,28 @@
 service: aws-lambda-dynamodb 
-frameworkVersion: '3' // frameworkVersion: versión del framework Serverless que se está utilizando
+frameworkVersion: '3' # frameworkVersion: versión del framework Serverless que se está utilizando
 
-provider: // provider: sección para especificar el proveedor de cloud y la configuración general del proyecto
-  name: aws // name: nombre del proveedor de cloud (AWS en este caso)
-  runtime: nodejs14.x // runtime: versión de Node.js que se está utilizando
-  httpApi: // httpApi: configuración para habilitar el uso de una API HTTP
-    cors: true // cors: habilita el soporte para CORS (permite que otras aplicaciones accedan a los recursos de esta)
-  iamRoleStatements: // iamRoleStatements: sección para especificar los permisos necesarios para acceder a los recursos de AWS
-    - Effect: Allow // Effect: Allow para permitir el acceso a los recursos especificados
-      Action:   // Action: lista de acciones permitidas, en este caso se permite todas las acciones de DynamoDB
+provider: #provider: sección para especificar el proveedor de cloud y la configuración general del proyecto
+  name: aws # name: nombre del proveedor de cloud (AWS en este caso)
+  runtime: nodejs14.x # runtime: versión de Node.js que se está utilizando
+  httpApi: #httpApi: configuración para habilitar el uso de una API HTTP
+    cors: true # cors: habilita el soporte para CORS (permite que otras aplicaciones accedan a los recursos de esta)
+  iamRoleStatements: # iamRoleStatements: sección para especificar los permisos necesarios para acceder a los recursos de AWS
+    - Effect: Allow # Effect: Allow para permitir el acceso a los recursos especificados
+      Action:   # Action: lista de acciones permitidas, en este caso se permite todas las acciones de DynamoDB
         - dynamodb:* 
-      Resource:  // Resource: lista de recursos a los que se tiene acceso, en este caso se especifica una tabla específica de DynamoDB
+      Resource:  # Resource: lista de recursos a los que se tiene acceso, en este caso se especifica una tabla específica de DynamoDB
         - arn:aws:dynamodb:us-east-1:919554715646:table/esp32_tabla
 
 
 
-functions: // functions: sección para especificar las funciones Lambda del proyecto
-  getReads: // getReads: nombre de la función
-    handler: src/getReads.getReads // handler: archivo que contiene el código de la función
-    events:  // events: eventos que desencadenan la ejecución de la función
-      - httpApi:  // httpApi: configuración para exponer la función como una ruta de una API HTTP
-          path: /reads  // path: ruta de la API
-          method: get // method: El tipo de petición
-          cors: true // cors: habilita el soporte para CORS en el metodo (permite que otras aplicaciones accedan a los recursos de esta)
+functions: # functions: sección para especificar las funciones Lambda del proyecto
+  getReads: # getReads: nombre de la función
+    handler: src/getReads.getReads # handler: archivo que contiene el código de la función
+    events:  # events: eventos que desencadenan la ejecución de la función
+      - httpApi:  # httpApi: configuración para exponer la función como una ruta de una API HTTP
+          path: /reads  # path: ruta de la API
+          method: get # method: El tipo de petición
+          cors: true #cors: habilita el soporte para CORS en el metodo (permite que otras aplicaciones accedan a los recursos de esta)
  
-
-
-
 
 
