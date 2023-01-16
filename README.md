@@ -1,92 +1,92 @@
 <!--
-title: 'AWS Simple HTTP Endpoint example in NodeJS'
-description: 'This template demonstrates how to make a simple HTTP API with Node.js running on AWS Lambda and API Gateway using the Serverless Framework.'
-layout: Doc
-framework: v3
-platform: AWS
-language: nodeJS
-authorLink: 'https://github.com/serverless'
-authorName: 'Serverless, inc.'
-authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
+title: 'Ejemplo de punto de enlace HTTP simple de AWS en NodeJS'
+description: 'Esta plantilla demuestra cómo crear una API HTTP simple con Node.js ejecutándose en AWS Lambda y API Gateway utilizando Serverless Framework'.
+diseño: documento
+marco: v3
+plataforma: AWS
+idioma: nodoJS
+enlace de autor: 'https://github.com/serverless'
+nombre del autor: 'Serverless, inc.'
+autorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
 -->
 
-# Serverless Framework Node HTTP API on AWS
+# API HTTP de nodo de marco sin servidor en AWS
 
-This template demonstrates how to make a simple HTTP API with Node.js running on AWS Lambda and API Gateway using the Serverless Framework.
+Esta plantilla demuestra cómo crear una API HTTP simple con Node.js ejecutándose en AWS Lambda y API Gateway utilizando Serverless Framework.
 
-This template does not include any kind of persistence (database). For more advanced examples, check out the [serverless/examples repository](https://github.com/serverless/examples/) which includes Typescript, Mongo, DynamoDB and other examples.
+Esta plantilla no incluye ningún tipo de persistencia (base de datos). Para obtener ejemplos más avanzados, consulte el [repositorio serverless/examples](https://github.com/serverless/examples/) que incluye Typescript, Mongo, DynamoDB y otros ejemplos.
 
-## Usage
+## Uso
 
-### Deployment
+### Despliegue
 
 ```
-$ serverless deploy
+$ implementación sin servidor
 ```
 
-After deploying, you should see output similar to:
+Después de la implementación, debería ver un resultado similar a:
 
 ```bash
-Deploying aws-node-http-api-project to stage dev (us-east-1)
+Implementación de aws-node-http-api-project en la etapa de desarrollo (us-east-1)
 
-✔ Service deployed to stack aws-node-http-api-project-dev (152s)
+✔ Servicio implementado para apilar aws-node-http-api-project-dev (152s)
 
-endpoint: GET - https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com/
-functions:
-  hello: aws-node-http-api-project-dev-hello (1.9 kB)
+punto final: OBTENER - https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com/
+funciones:
+   hola: aws-node-http-api-project-dev-hello (1,9 kB)
 ```
 
-_Note_: In current form, after deployment, your API is public and can be invoked by anyone. For production deployments, you might want to configure an authorizer. For details on how to do that, refer to [http event docs](https://www.serverless.com/framework/docs/providers/aws/events/apigateway/).
+_Nota_: en la forma actual, después de la implementación, su API es pública y cualquiera puede invocarla. Para implementaciones de producción, es posible que desee configurar un autorizador. Para obtener detalles sobre cómo hacerlo, consulte [documentos de eventos http](https://www.serverless.com/framework/docs/providers/aws/events/apigateway/).
 
-### Invocation
+### Invocación
 
-After successful deployment, you can call the created application via HTTP:
+Después de una implementación exitosa, puede llamar a la aplicación creada a través de HTTP:
 
 ```bash
 curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/
 ```
 
-Which should result in response similar to the following (removed `input` content for brevity):
+Lo que debería dar como resultado una respuesta similar a la siguiente (se eliminó el contenido de `input` por brevedad):
 
 ```json
 {
-  "message": "Go Serverless v2.0! Your function executed successfully!",
-  "input": {
-    ...
-  }
+   "message": "¡Vaya sin servidor v2.0! ¡Su función se ejecutó con éxito!",
+   "aporte": {
+     ...
+   }
 }
 ```
 
-### Local development
+### Desarrollo local
 
-You can invoke your function locally by using the following command:
+Puede invocar su función localmente usando el siguiente comando:
 
 ```bash
-serverless invoke local --function hello
+sin servidor invocar local --función hola
 ```
 
-Which should result in response similar to the following:
+Lo que debería dar como resultado una respuesta similar a la siguiente:
 
 ```
 {
-  "statusCode": 200,
-  "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": \"\"\n}"
+   "código de estado": 200,
+   "body": "{\n \"message\": \"¡Vaya a Serverless v3.0! ¡Su función se ejecutó con éxito!\",\n \"input\": \"\"\n}"
 }
 ```
 
 
-Alternatively, it is also possible to emulate API Gateway and Lambda locally by using `serverless-offline` plugin. In order to do that, execute the following command:
+Alternativamente, también es posible emular API Gateway y Lambda localmente usando el complemento `sin servidor sin conexión`. Para hacer eso, ejecute el siguiente comando:
 
 ```bash
-serverless plugin install -n serverless-offline
+instalación del complemento sin servidor -n serverless-offline
 ```
 
-It will add the `serverless-offline` plugin to `devDependencies` in `package.json` file as well as will add it to `plugins` in `serverless.yml`.
+Agregará el complemento `serverless-offline` a `devDependencies` en el archivo `package.json` y también lo agregará a `plugins` en `serverless.yml`.
 
-After installation, you can start local emulation with:
+Después de la instalación, puede iniciar la emulación local con:
 
 ```
-serverless offline
+sin servidor fuera de línea
 ```
 
-To learn more about the capabilities of `serverless-offline`, please refer to its [GitHub repository](https://github.com/dherault/serverless-offline).  
+Para obtener más información sobre las capacidades de `serverless-offline`, consulte su [repositorio de GitHub] (https://github.com/dherault/serverless-offline).
