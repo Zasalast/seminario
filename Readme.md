@@ -24,7 +24,10 @@ Obtener los datos de DynamoDB mediante una función Lambda utilizando el Framewo
 
 12. Utiliza el componente ResponsiveContainer de Recharts para asegurar que la gráfica se ajuste automáticamente al tamaño de pantalla.
 
-13. Utiliza el componente LineChart de Recharts para mostrar los datos en una gráfica de línea, y los componentes Line, XAxis, YAxis
+13. Utiliza el componente LineChart de Recharts para mostrar los datos en una gráfica de línea, y los componentes Line, XAxis, YAxis.
 
+En los Siguientes enlaces Encontrara más información acerca de el despliegue en sus diferentes etapas.
+
+- [Repositorio IoT](https://github.com/Zasalast/esp32-incubadora-nex.git)
 - [Repositorio FrontEnd](https://github.com/Zasalast/esp32-incubadora-nex.git)
 - [Repositorio BackEnd](https://github.com/Zasalast/seminario/tree/backend)
