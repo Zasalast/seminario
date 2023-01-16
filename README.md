@@ -166,6 +166,6 @@ module.exports = {
 3. Verificar que el proyecto se ha desplegado correctamente en la consola de AWS.
 4. Utilizar la URL de la función Lambda para acceder a los datos de DynamoDB del EndPoint.
 
-Se pueden configurar cual
+Tener encuenta que se pueden configurar múltiples funciones para diferentes operaciones CRUD (Crear, Leer, Actualizar, Eliminar).  
 
 Para obtener más información sobre las capacidades de `serverless-offline`, consulte su [repositorio de GitHub] (https://github.com/dherault/serverless-offline).
