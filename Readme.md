@@ -1,76 +1,30 @@
-380 horas totales
-160 horas de clases
+Obtener los datos de DynamoDB mediante una función Lambda utilizando el Framework Serverless crear endpoint para consumir en reactjs y graficar los mismos se realiza a grandes rasgos con los siguientes pasos.
 
-notas
-3.7
-3.8 para aprobar
+1. Crea un archivo serverless.yml en la raíz de tu proyecto. Este archivo se utilizará para configurar y describir tu proyecto Serverless.
 
-informe final
-dos personas para hacer el informe final
+2. En el archivo serverless.yml, especifica el nombre de tu proyecto y el runtime de Node.js que estarás utilizando.
 
-presentacion
-2 ingenieros validan sin pasa o no.
+3. Agrega una sección llamada "provider" en el archivo serverless.yml. En esta sección, especifica el proveedor de cloud (AWS) y la región en la que deseas desplegar tu proyecto.
 
-12 13 14 15 16
-10 20 21 22 23
+4. Agrega una sección llamada "functions" en el archivo serverless.yml. En esta sección, especifica el nombre de tus funciones Lambda y el archivo que contiene el código de la función.
 
-hacer la solución
-26 27 28 29 30
-2 3 4 5 6
+5. Agrega una sección llamada "resources" en el archivo serverless.yml. En esta sección, especifica los recursos necesarios para tu proyecto, como DynamoDB o tablas.
 
-- 10 11 12 13
+6. Agrega una sección llamada "iamRoleStatements" en el archivo serverless.yml. En esta sección, especifica los permisos necesarios para acceder a DynamoDB y graficar los datos en React.js con Recharts.
 
-sustentación
-16 17 18 19 20
-23 24
+7. Implementa la lógica en la función Lambda para obtener los datos de la tabla de DynamoDB mediante el uso de métodos de la biblioteca AWS SDK como scan o query.
 
-servicios
-base de datos - ia -iot
+8. Utiliza el método scan para obtener todos los elementos de la tabla de DynamoDB o el método query para obtener elementos específicos mediante la especificación de un filtro.
 
-- laas
-- paas
-- saas
+9. Una vez obtenidos los datos, retornarlos en la respuesta de la función Lambda en formato JSON.
 
-# proyecto
+10. En la aplicación React, utiliza un componente de Recharts para mostrar la gráfica y la librería axios para realizar una petición HTTP a la función Lambda.
 
-1. idea de proyecto - dos integrantes
-ante proyecto-documentar-socializar
-herramientas- apa-mendeley
+11. En el componente React, al recibir los datos de la petición HTTP, actualiza el estado con los datos obtenidos y pásalos como propiedad al componente de Recharts para mostrarlos en la gráfica.
 
-marco teorico
+12. Utiliza el componente ResponsiveContainer de Recharts para asegurar que la gráfica se ajuste automáticamente al tamaño de pantalla.
 
-- objetivo
-- desarrollo
-- conclusiones
+13. Utiliza el componente LineChart de Recharts para mostrar los datos en una gráfica de línea, y los componentes Line, XAxis, YAxis
 
-2. nube
-3.
-
-marco teorico
-diagrama fisico
-Diseño de sistema que regule la temperatura de hábitat productor avícola
-
- analizar herramientas para Medir y regular la temperatura del habitad en que se encuentra los pollitos.
-
-identificar herramientas para Medir y regular la temperatura del habitad en que se encuentra los pollitos.
-
-establecer  herramientas para Medir y regular la temperatura del habitad en que se encuentra los pollitos.
-
- diseñar sistema para Medir y regular la temperatura del habitad en que se encuentra los pollitos.
-
-evaluar  el sistema para Medir y regular la temperatura del habitad en que se encuentra los pollitos.
-
-que o cual  que sistema permite regular
-justificar el problema
-
-1. causas  - temperatura
-2. efectos- enfermedad
-3. consecuencias- muerte
-
-objetivo
-analisis situacion actual del proyecto, de referentes conceptuales del problema
-diseño
-analisis requerimientos del software y la validez ser unico
-----------------------------------------------------
-
-crear las actividades para cumplir los objetivos
+- [Repositorio FrontEnd](https://github.com/Zasalast/esp32-incubadora-nex.git)
+- [Repositorio BackEnd](https://github.com/Zasalast/seminario/tree/backend)
