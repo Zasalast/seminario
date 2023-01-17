@@ -28,6 +28,6 @@ Obtener los datos de DynamoDB mediante una función Lambda utilizando el Framewo
 
 En los Siguientes enlaces Encontrara más información acerca de el despliegue en sus diferentes etapas.
 
-- [Repositorio IoT](https://github.com/Zasalast/esp32-incubadora-nex.git)
+- [Repositorio IoT](https://github.com/Zasalast/Esp32-D1-Criadora-de-Pollos)
 - [Repositorio FrontEnd](https://github.com/Zasalast/esp32-incubadora-nex.git)
 - [Repositorio BackEnd](https://github.com/Zasalast/seminario/tree/backend)
